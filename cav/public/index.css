@@ -1,0 +1,78 @@
+/* 初始化 */
+
+* {
+    /* 清除内外边距 */
+    margin: 0;
+    padding: 0;
+}
+
+i {
+    /* 把em和i斜体的文字不倾斜 */
+    font-style: normal;
+}
+
+li {
+    /* 清除li的小圆点 */
+    list-style: none;
+}
+
+img {
+    /* border: 0;照顾低版本浏览器,如果图片外面包含了链接会有边框的问题 */
+    border: 0;
+    /* 取消图片底部的空白 */
+    vertical-align: middle;
+}
+
+button {
+    /* 当鼠标经过button按钮时,鼠标变成小手 */
+    cursor: pointer;
+}
+
+a {
+    /* 改变链接文字颜色并取消下划线 */
+    color: #636363;
+    text-decoration: none;
+}
+
+a:hover {
+    /* 鼠标经过,文字变红 */
+    color: #3db54f;
+    cursor: pointer;
+}
+
+button,
+input {
+    /* 输入字体家族 */
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif
+}
+
+body {
+    /* CSS3 抗锯齿形 文字放大的时候更清晰 */
+    -webkit-font-smoothing: antialiased;
+    background-color: rgb(255, 255, 255);
+    font: 12px/1.5 Inter, Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    color: #636363
+}
+
+
+/* 添加了hide 或者none 类的隐藏 */
+
+.hide,
+.none {
+    display: none
+}
+
+
+/* 清除浮动 */
+
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1
+}

@@ -1,0 +1,85 @@
+.ThesisEvent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 64px);
+}
+
+.ThesisEvent {
+    display: flex;
+    justify-content: center;
+    align-content: start;
+    flex-wrap: wrap;
+    height: 93%;
+    width: 96%;
+    padding: 2rem 40px;
+    background-color: #fff;
+    overflow-y: scroll;
+}
+
+/* 滚动条上的滚动滑块 */
+.ThesisEvent::-webkit-scrollbar-thumb {
+    background-color: #2f2c2c;
+    border-radius:  6.5px 6px 6px 6.5px;
+    height: 30px;
+}
+
+/* 滚动条上的箭头按钮 */
+.ThesisEvent::-webkit-scrollbar {
+    width: 13px;
+}
+
+.ThesisEvent>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    width: 100%;
+    font-size: 16px;
+}
+
+.ThesisEvent-abstract-title,
+.ThesisEvent-keyWord-title,
+.ThesisEvent-publication-title,
+.ThesisEvent-date-title {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.ThesisEvent>.ThesisEvent-title {
+    justify-content: center;
+    width: 60%;
+    margin: 0 0 1rem 0;
+    font-size: 26px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.ThesisEvent>.ThesisEvent-author {
+    justify-content: center;
+    margin: 0 0 2.5rem 0;
+}
+
+.ThesisEvent>.ThesisEvent-original {
+    justify-content: end;
+    margin: 0 0 2.5rem 0;
+}
+
+.ThesisEvent>.ThesisEvent-original>a{
+    color: #1890ff;
+    border-bottom: 1px solid #1890ff;
+}
+
+.ThesisEvent-abstract,
+.ThesisEvent-keyWord,
+.ThesisEvent-publication,
+.ThesisEvent-date {
+    margin: 0 0 2rem 0;
+}
+
+.ThesisEvent-abstract-title,
+.ThesisEvent-keyWord-title,
+.ThesisEvent-publication-title,
+.ThesisEvent-date-title {
+    margin: 0 0 1rem 0;
+}

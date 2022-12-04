@@ -1,0 +1,88 @@
+.cavClusters {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    /* flex-wrap: wrap; */
+}
+
+.cavClusters-right {
+    overflow: hidden;
+    width: calc(100vw - 200px);
+    height: 100%;
+}
+
+.cavClusters-right-del {
+    height: 44px;
+    width: calc(100vw - 200px);
+    padding: 0 40px 0 0;
+    border-bottom: 1px solid rgba(184, 184, 184, .5);
+    background-color: #fff;
+    line-height: 44px;
+    text-align: end;
+}
+
+.cavClusters-right-main {
+    display: flex;
+    align-items: center;
+    background-color: rgb(89, 89, 89);
+    width: 3000vw;
+    height: calc(100vh - 44px - 64px);
+    margin-left: -0px;
+}
+
+/* .cavClusters-right-lane {
+    width: 100%;
+}
+
+.cavClusters-right-lane li {
+    width: 100%;
+    height: calc(calc(100vh - 44px - 64px) / 5);
+    background-image: linear-gradient(to right,
+            #ededed 0%,
+            #ededed 50%,
+            transparent 50%);
+    background-size: 120px 3px;
+    background-repeat: repeat-x;
+
+
+}
+
+.cavClusters-right-lane li:first-child {
+    background-image: none;
+    border-top: 3px solid white;
+
+}
+
+.cavClusters-right-lane li:last-child {
+    border-bottom: 3px solid white;
+
+} */
+
+.cavClusters video {
+    /* position: absolute; */
+    z-index: 2;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 44px - 64px);
+    background: rgb(89, 89, 89);
+}
+
+.cavClusters .video {
+    position: absolute;
+    z-index: 10;
+    left: 200px;
+    /* top: 108px; */
+    top: 44px;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 44px - 64px);
+    background: rgb(89, 89, 89);
+}
+
+.loadingJpg {
+    position: absolute;
+    z-index: 1;
+    left: 185px;
+    top: 108px;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 44px - 64px);
+}

@@ -1,0 +1,64 @@
+.cavClassic {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    /* flex-wrap: wrap; */
+}
+
+.cavClassic-right {
+    overflow: hidden;
+    width: calc(100vw - 200px);
+    height: 100%;
+}
+
+.cavClassic-setSpeedBtn {
+    width: 75px;
+}
+
+.cavClassic-right-head {
+    height: 44px;
+    width: calc(100vw - 200px);
+    padding: 0 40px 0 0;
+    border-bottom: 1px solid rgba(184, 184, 184, .5);
+    background-color: #fff;
+    line-height: 44px;
+    text-align: end;
+}
+
+.cavClassic-right-main {
+    display: flex;
+    align-items: center;
+    background-color: rgb(89, 89, 89);
+    width: 3000vw;
+    height: calc(100vh - 44px - 64px);
+    margin-left: -0px;
+}
+
+.cavClassic video {
+    /* position: absolute; */
+    z-index: 3;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 44px - 64px);
+    background: rgb(89, 89, 89);
+}
+
+.cavClassic .video {
+    position: absolute;
+    z-index: 10;
+    left: 200px;
+    /* top: 108px; */
+    top: 44px;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 44px - 64px);
+    background: rgb(89, 89, 89);
+}
+
+.loadingJpg {
+    position: absolute;
+    z-index: 1;
+    left: 185px;
+    top: 108px;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 44px - 64px);
+}

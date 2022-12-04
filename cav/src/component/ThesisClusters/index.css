@@ -1,0 +1,85 @@
+.ThesisClusters-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 64px);
+}
+
+.ThesisClusters {
+    display: flex;
+    justify-content: center;
+    align-content: start;
+    flex-wrap: wrap;
+    height: 93%;
+    width: 96%;
+    padding: 2rem 40px;
+    background-color: #fff;
+    overflow-y: scroll;
+}
+
+/* 滚动条上的滚动滑块 */
+.ThesisClusters::-webkit-scrollbar-thumb {
+    background-color: #2f2c2c;
+    border-radius:  6.5px 6px 6px 6.5px;
+    height: 30px;
+}
+
+/* 滚动条上的箭头按钮 */
+.ThesisClusters::-webkit-scrollbar {
+    width: 13px;
+}
+
+.ThesisClusters>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    width: 100%;
+    font-size: 16px;
+}
+
+.ThesisClusters-abstract-title,
+.ThesisClusters-keyWord-title,
+.ThesisClusters-publication-title,
+.ThesisClusters-date-title {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.ThesisClusters>.ThesisClusters-title {
+    justify-content: center;
+    width: 75%;
+    margin: 0 0 1rem 0;
+    font-size: 26px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.ThesisClusters>.ThesisClusters-author {
+    justify-content: center;
+    margin: 0 0 3rem 0;
+}
+
+.ThesisClusters>.ThesisClusters-original {
+    justify-content: end;
+    margin: 0 0 3rem 0;
+}
+
+.ThesisClusters>.ThesisClusters-original>a{
+    color: #1890ff;
+    border-bottom: 1px solid #1890ff;
+}
+
+.ThesisClusters-abstract,
+.ThesisClusters-keyWord,
+.ThesisClusters-publication,
+.ThesisClusters-date {
+    margin: 0 0 2rem 0;
+}
+
+.ThesisClusters-abstract-title,
+.ThesisClusters-keyWord-title,
+.ThesisClusters-publication-title,
+.ThesisClusters-date-title {
+    margin: 0 0 1rem 0;
+}

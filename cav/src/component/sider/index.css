@@ -1,0 +1,9 @@
+/* 侧边栏 */
+.mySider {
+    background-color: #ffffff;
+    height: calc(100vh - 64px);
+}
+
+.mySider-menu {
+    font-weight: 700;
+}

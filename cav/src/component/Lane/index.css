@@ -1,0 +1,31 @@
+.Lane {
+    width: 100%;
+}
+
+.Lane li {
+    width: 100%;
+    height: calc(calc(100vh - 44px - 64px) / 5);
+    background-image: linear-gradient(to right,
+            #ededed 0%,
+            #ededed 50%,
+            transparent 50%);
+    background-size: 120px 3px;
+    background-repeat: repeat-x;
+}
+
+.Lane li:first-child {
+    background-image: none;
+    border-top: 3px solid white;
+
+}
+
+.Lane li:last-child {
+    border-bottom: 3px solid white;
+
+}
+
+/* 多编队 */
+.cavClustersLane:hover {
+    background-color: rgba(135, 135, 135, 1);
+    cursor: pointer;
+}

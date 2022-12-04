@@ -1,0 +1,111 @@
+.RouteAndMove img:hover {
+    cursor: pointer;
+}
+
+.car {
+    position: absolute;
+    cursor: pointer;
+    /* transition: all 3s; */
+    z-index: 1;
+}
+
+.lefttest {
+    left: 1000px !important;
+}
+
+.ant-col-9 {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    height: 600px;
+    width: 1200px;
+}
+
+.container_box {
+    width: 500px;
+    height: 500px;
+    margin: 30px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #a5b1b8;
+    background-color: #f3f3f3;
+}
+
+.triangle {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    border-radius: 30px;
+    /* background-color: #fff; */
+}
+
+.triangle:hover {
+    cursor: pointer;
+
+}
+
+.bubble {
+    position: absolute;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 315px;
+    padding: 7px 5px 0 5px;
+    border-radius: 6px;
+    background-color: #1890ff;
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, .1);
+    color: #fff;
+    z-index: 4;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.red {
+    background-color: rgba(237, 90, 101, 1);
+}
+
+.blue {
+    background-color: #1890ff;
+}
+
+.bubble .ant-space {
+    margin-bottom: 7px;
+}
+
+.bubble input {
+    height: 22px;
+}
+
+.bubble .ant-input-number {
+    width: 50px;
+}
+
+.blue::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: 50%;
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    border-top: 10px solid #1890ff;
+    transform: translate(50%, 0);
+}
+
+.red::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: 50%;
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    border-top: 10px solid rgba(237, 90, 101, 1);
+    transform: translate(50%, 0);
+}
+
+.show {
+    opacity: 1;
+}

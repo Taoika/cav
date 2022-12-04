@@ -1,0 +1,51 @@
+/* 导航栏样式 */
+
+.head {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: 'Inter';
+    box-shadow: 1px 1px 5px rgba(0,0,0,.3);
+    z-index: 10;
+}
+
+.head-header {
+    display: flex;
+    padding: 0 1vw;
+    background-color: #fff;
+}
+
+.head-logo {
+    margin: 4px 1vw 0 0;
+}
+
+.head-logo:hover {
+    cursor: pointer;
+}
+
+.head-menu {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    font-size: 16px;
+}
+
+.head-menu>.ant-menu-item .anticon {
+    margin: 0 0.5vw 0 0;
+}
+
+.head-menu .anticon>svg {
+    width: 18px;
+    height: 18px;
+}
+
+.head-menu>.ant-menu-item::after,
+.head-menu>.ant-menu-submenu::after {
+    position: absolute;
+    right: 20px;
+    bottom: 62px;
+    left: 20px;
+    border-top: 2px solid transparent;
+    transition: border-color .3s cubic-bezier(.645,.045,.355,1);
+    content: "";
+ }

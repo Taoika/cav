@@ -1,0 +1,55 @@
+.masApp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.masApp>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 64px);
+    background-color:#F5F5F5;
+}
+
+.masApp-content {
+    text-align: center;
+    height: 93%;
+    width: 96%;
+    padding: 30px;
+    background-color: #fff;
+    overflow: auto;
+}
+
+/* 滚动条上的滚动滑块 */
+.masApp-content::-webkit-scrollbar-thumb {
+    background-color: #2f2c2c;
+    border-radius:  6.5px 6px 6px 6.5px;
+    height: 30px;
+}
+
+/* 滚动条上的箭头按钮 */
+.masApp-content::-webkit-scrollbar {
+    width: 13px;
+}
+
+.masApp-content h2 {
+    font-weight: 700;
+}
+
+.masEvent-container img,
+.masClusters-container img {
+    width:870px;
+}
+
+@media screen and (min-width:1500px) {
+    
+    .masApp-content img {
+        width: 1000px;
+    }
+
+    .masEvent-container img,
+    .masClusters-container img {
+        width:1300px;
+    }
+}
