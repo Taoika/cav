@@ -33,7 +33,7 @@ export default function CavClusters() {
 	const [sysLine, setSysLine] = useState([{ x: 0, y: 0 }]);
 	const [refresh, setRefresh] = useState(false)
 	//最左边车辆的坐标
-	const [Leftest, setLeftest] = useState(0)
+	const [Leftest, setLeftest] = useState(210)
 	//屏幕坐标
 	const [scrCoor, setScrCoor] = useState([{ x: 0, y: 0 }])
 	//坐标系坐标
@@ -45,7 +45,8 @@ export default function CavClusters() {
 	//设置阀门,只有当move为true时小车才能动
 	const [move, setMove] = useState(false)
 	// 跟随车领导车数组
-	const [carType, setCarType] = useState([]);
+	const [carType, setCarType] = useState([0,0,0,0,0,0,1,1,1,1]);
+	// const [carType, setCarType] = useState([]);
 
 
 	// 点击run按钮
@@ -53,7 +54,7 @@ export default function CavClusters() {
 		if (Ncar.length > 0 && Nlane.length > 0 && Nlane[0] === 0 && Nlane[0] === 0) {
 			// console.log(initPosition, 'initPosition');
 			let temp = initPosition
-			let max = { x: 100, y: 100 }
+			let max = { x: 1000, y: 100 }
 			let Lane = document.querySelector('.cavClusters-right-main')
 			Lane.style.marginLeft = 0
 			// obj宽度
@@ -113,7 +114,7 @@ export default function CavClusters() {
 					}
 				}
 			}
-			console.log(cav_x_list, cav_xL_list);
+			console.log('cav_x_list->',cav_x_list, 'cav_xL_list->',cav_xL_list);
 
 			// 跟随车位置
 			// let cav_x_list = [[[],[]],[[],[]],[[],[]]];
@@ -569,47 +570,471 @@ export default function CavClusters() {
 				],
 			}
 
-			let digital = { 	
-				// 跟随车位置
-				"cav_x_list": 
-					cav_x_list,
-				// 领导车位置
-				"cav_xL_list": 
-					cav_xL_list,
-				// 跟随车速度
-				"cav_v_list": 
-					cav_x_list,
-				// 领导车速度
-				"cav_vL_list": 
-					cav_xL_list,
-				// 跟随车期望距离
-				"cav_r_list":
-				[
+			let digital_6 = {
+                "cav_x_list": [
+                    [
+                        [3,6],
+                        [0,90]
+                    ],
+                    [
+                        [12,15],
+                        [90,90]
+                    ],
+                    [
+                        [21,24],
+                        [90,90]
+                    ]
+                ],
+                "cav_xL_list": [
+                    [
+                        [0],
+                        [0]
+                    ],
+                    [
+                        [9],
+                        [0]
+                    ],
+                    [
+                        [18],
+                        [0]
+                    ],
+                    [
+                        [27],
+                        [0]
+                    ]
+                ],
+				"cav_v_list": [
+					[
+						[
+							20,
+							20
+						],
+						[
+							0,
+							0
+						]
+					],
+					[
+						[
+							20,
+							20
+						],
+						[
+							0,
+							0
+						]
+					],
+					[
+						[
+							20,
+							20
+						],
+						[
+							0,
+							0
+						]
+					]
+				],
+				"cav_vL_list": [
+					[
+						[
+							20
+						],
+						[
+							0
+						]
+					],
+					[
+						[
+							20
+						],
+						[
+							0
+						]
+					],
+					[
+						[
+							20
+						],
+						[
+							0
+						]
+					],
+					[
+						[
+							20
+						],
+						[
+							0
+						]
+					]
+				],
+				"cav_r_list": [
+					[
+						[3,6],
+						[0,0]
+					],
+					[
+						[12,15],
+						[0,0]
+					],
+					[
+						[21,24],
+						[0,0]
+					]
+				],
+				"cav_rL_list": [
 					[
 						[0],
 						[0]
 					],
 					[
-						[16],
-						[58]
+						[9],
+						[0]
+					],
+					[
+						[18],
+						[0]
+					],
+					[
+						[27],
+						[0]
+					]
+				]
+			}
+
+			let digital_7 = {
+				"cav_x_list": [
+					[
+						[
+							7,
+							17
+						],
+						[
+							2,
+							1
+						]
+					],
+					[
+						[
+							40,
+							60
+						],
+						[
+							2,
+							2
+						]
+					],
+					[
+						[
+							82,
+							93
+						],
+						[
+							2,
+							2
+						]
 					]
 				],
-				// 领导车期望距离
-				"cav_rL_list": 
-				[
+				"cav_xL_list": [
 					[
-						[-4],
-						[0]
+						[
+							0
+						],
+						[
+							1
+						]
 					],
 					[
-						[12],
-						[0]
+						[
+							35
+						],
+						[
+							1
+						]
 					],
 					[
-						[20],
-						[0]
+						[
+							75
+						],
+						[
+							1
+						]
 					],
+					[
+						[
+							104
+						],
+						[
+							1
+						]
+					]
 				],
+				"cav_v_list": [
+					[
+						[
+							10,
+							10
+						],
+						[
+							0,
+							0
+						]
+					],
+					[
+						[
+							10,
+							10
+						],
+						[
+							0,
+							0
+						]
+					],
+					[
+						[
+							10,
+							10
+						],
+						[
+							0,
+							0
+						]
+					]
+				],
+				"cav_vL_list": [
+					[
+						[
+							10
+						],
+						[
+							0
+						]
+					],
+					[
+						[
+							20
+						],
+						[
+							0
+						]
+					],
+					[
+						[
+							20
+						],
+						[
+							0
+						]
+					],
+					[
+						[
+							10
+						],
+						[
+							0
+						]
+					]
+				],
+				"cav_r_list": [
+					[
+						[
+							10,
+							20
+						],
+						[
+							0,
+							0
+						]
+					],
+					[
+						[
+							40,
+							50
+						],
+						[
+							0,
+							0
+						]
+					],
+					[
+						[
+							70,
+							80
+						],
+						[
+							0,
+							0
+						]
+					]
+				],
+				"cav_rL_list": [
+					[
+						[
+							0
+						],
+						[
+							0
+						]
+					],
+					[
+						[
+							30
+						],
+						[
+							0
+						]
+					],
+					[
+						[
+							60
+						],
+						[
+							0
+						]
+					],
+					[
+						[
+							90
+						],
+						[
+							0
+						]
+					]
+				]
+			}
+
+			let digital = {
+                "cav_x_list": [
+                    [
+                        [6,12],
+                        [0,90]
+                    ],
+                    [
+                        [24,30],
+                        [90,90]
+                    ],
+                    [
+                        [42,48],
+                        [90,90]
+                    ]
+                ],
+                "cav_xL_list": [
+                    [
+                        [0],
+                        [0]
+                    ],
+                    [
+                        [18],
+                        [0]
+                    ],
+                    [
+                        [36],
+                        [0]
+                    ],
+                    [
+                        [54],
+                        [0]
+                    ]
+                ],
+				"cav_v_list": [
+					[
+						[
+							20,
+							20
+						],
+						[
+							0,
+							0
+						]
+					],
+					[
+						[
+							20,
+							20
+						],
+						[
+							0,
+							0
+						]
+					],
+					[
+						[
+							20,
+							20
+						],
+						[
+							0,
+							0
+						]
+					]
+				],
+				"cav_vL_list": [
+					[
+						[
+							20
+						],
+						[
+							0
+						]
+					],
+					[
+						[
+							20
+						],
+						[
+							0
+						]
+					],
+					[
+						[
+							20
+						],
+						[
+							0
+						]
+					],
+					[
+						[
+							20
+						],
+						[
+							0
+						]
+					]
+				],
+				"cav_r_list": [
+					[
+						[6,12],
+						[0,0]
+					],
+					[
+						[24,30],
+						[0,0]
+					],
+					[
+						[42,48],
+						[0,0]
+					]
+				],
+				"cav_rL_list": [
+					[
+						[0],
+						[0]
+					],
+					[
+						[19],
+						[0]
+					],
+					[
+						[36],
+						[0]
+					],
+					[
+						[54],
+						[0]
+					]
+				]
 			}
 			
 			let url = 'https://qgailab.com/cav-api/2/easy-task';
@@ -627,42 +1052,41 @@ export default function CavClusters() {
 					const res_xL = response.data.data.xL_list;
 					const res_x = response.data.data.x_list;
 					response.data.data.x_list.map((v, i) => {
-						let Obj = {
-							list: [],
-						};
-						if(temp.length % 2 === 1){ // 奇数 先取领导车
-							for(let i = 0; i < temp.length; i++){
-								if(i % 2 === 0){
-									Obj.list.push({ x: res_xL[i][parseInt(i/2)][0][0], y: res_xL[i][parseInt(i/2)][1][0] });
-								} else {
-									Obj.list.push({ x: res_x[i][parseInt(i/2)][0][0], y: res_x[i][parseInt(i/2)][1][0]});
-								}
-							}
-						} else { // 偶数 先取跟随车
-							console.log(res_x[i], res_x[i]);
-							Obj.list.push({ x: res_x[i][0][0][0], y: res_x[i][0][1][0] });
-							res_x[i][0][0][0] = res_x[i][1][0][0];
-							res_xL[i][0][1][0] = res_xL[i][1][1][0];
-							for(let i = 0; i < temp.length; i++){
-								if(i % 2 === 0){
-									Obj.list.push({ x: res_xL[i][parseInt((i - 1) / 2 )][0][0], y: res_xL[i][parseInt((i - 1) / 2)][1][0] });
-								} else {
-									Obj.list.push({ x: res_x[i][parseInt((i- 1) / 2)][0][0], y: res_x[i][parseInt((i - 1) / 2)][1][0]});
-								}
-							}
-						}
-						data.push(Obj);
 						// let Obj = {
 						// 	list: [],
 						// };
-						// for(const k of v){
-						// 	Obj.list.push({x: k[0][0], y: k[1][0]});
-						// 	Obj.list.push({x: k[0][1], y: k[1][1]});
-						// }
-						// for(const u of response.data.data.xL_list[i]){
-						// 	Obj.list.push({x: u[0][0], y: u[1][0]});
+						// if(temp.length % 2 === 1){ // 奇数 先取领导车
+						// 	for(let i = 0; i < temp.length; i++){
+						// 		if(i % 2 === 0){
+						// 			Obj.list.push({ x: res_xL[i][parseInt(i/2)][0][0], y: res_xL[i][parseInt(i/2)][1][0] });
+						// 		} else {
+						// 			Obj.list.push({ x: res_x[i][parseInt(i/2)][0][0], y: res_x[i][parseInt(i/2)][1][0]});
+						// 		}
+						// 	}
+						// } else { // 偶数 先取跟随车
+						// 	Obj.list.push({ x: res_x[i][0][0][0], y: res_x[i][0][1][0] });
+						// 	res_x[i][0][0][0] = res_x[i][1][0][0];
+						// 	res_xL[i][0][1][0] = res_xL[i][1][1][0];
+						// 	for(let k = 0; k < temp.length - 1; k++){
+						// 		if(k % 2 === 0){// 偶数项
+						// 			Obj.list.push({ x: res_xL[i][parseInt((k - 1) / 2 )][0][0], y: res_xL[i][parseInt((k - 1) / 2)][1][0] });
+						// 		} else {// 奇数项
+						// 			Obj.list.push({ x: res_x[i][parseInt((k- 1) / 2)][0][0], y: res_x[i][parseInt((k - 1) / 2)][1][0]});
+						// 		}
+						// 	}
 						// }
 						// data.push(Obj);
+						let Obj = {
+							list: [],
+						};
+						for(const k of v){
+							Obj.list.push({x: k[0][0], y: k[1][0]});
+							Obj.list.push({x: k[0][1], y: k[1][1]});
+						}
+						for(const u of response.data.data.xL_list[i]){
+							Obj.list.push({x: u[0][0], y: u[1][0]});
+						}
+						data.push(Obj);
 					})
 					console.log(data);
 					setCoor(data);
@@ -735,22 +1159,22 @@ export default function CavClusters() {
 	}, [refresh]);
 
 	// 小车类型判断
-	useEffect(() => {
-		setCarType([]);
-		let form = [];
-		if(Ncar.length % 2 === 1){
-			for(let i = 0; i < Ncar.length; i++){
-				if(i % 2 === 0) form.push(1);
-				else form.push(0);
-			}
-		} else{
-			for(let i = 0; i < Ncar.length; i++){
-				if(i % 2 === 0) form.push(0);
-				else form.push(1);
-			}
-		}
-		setCarType(form);
-	},[Ncar.length]);
+	// useEffect(() => {
+	// 	setCarType([]);
+	// 	let form = [];
+	// 	if(Ncar.length % 2 === 1){
+	// 		for(let i = 0; i < Ncar.length; i++){
+	// 			if(i % 2 === 0) form.push(1);
+	// 			else form.push(0);
+	// 		}
+	// 	} else{
+	// 		for(let i = 0; i < Ncar.length; i++){
+	// 			if(i % 2 === 0) form.push(0);
+	// 			else form.push(1);
+	// 		}
+	// 	}
+	// 	setCarType(form);
+	// },[Ncar.length]);
 
 	return (
 		<div className="cavClusters">

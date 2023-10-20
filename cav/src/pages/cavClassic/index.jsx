@@ -68,7 +68,7 @@ export default function CavClassic() {
 				j.x = (j.x - offsetLeft) * max.x / clientWidth;
 				j.y = (maxY - (j.y - offsetTop)) * max.y / maxY;
 			})
-			// console.log(temp, 'temp');
+			console.log(temp, 'temp');
 			// console.log(speedxy, 'speedxy');
 			let data = {
 				"cav_y": sysLine[0].y,
